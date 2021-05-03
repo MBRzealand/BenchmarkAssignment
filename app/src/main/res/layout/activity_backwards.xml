@@ -9,7 +9,7 @@
 
     <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content" android:id="@+id/outputView1"
+            android:layout_height="wrap_content" android:id="@+id/originalOutput"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
@@ -27,11 +27,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content" android:id="@+id/reversedLabel"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/outputView1" android:layout_marginStart="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/originalOutput" android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp" android:layout_marginTop="24dp" android:textStyle="bold"/>
     <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content" android:id="@+id/outputView2"
+            android:layout_height="wrap_content" android:id="@+id/reversedOutput"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/reversedLabel" android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp" android:layout_marginTop="24dp"/>
@@ -40,11 +40,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content" android:id="@+id/listOfMessagesLabel"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/outputView2" android:layout_marginEnd="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/reversedOutput" android:layout_marginEnd="24dp"
             android:layout_marginStart="24dp" android:layout_marginTop="24dp" android:textStyle="bold"/>
     <TextView
             android:layout_width="0dp"
-            android:layout_height="wrap_content" android:id="@+id/outputView3"
+            android:layout_height="wrap_content" android:id="@+id/listOutput"
             app:layout_constraintTop_toBottomOf="@+id/listOfMessagesLabel" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="24dp"
             android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>

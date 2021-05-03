@@ -15,19 +15,30 @@ import java.util.ArrayList;
 
 public class Main extends AppCompatActivity {
 
-    Model model = new Model();
-    ArrayList<String> listOfInputs = new ArrayList<>();
+    Model model;
+    ArrayList<String> listOfInputs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        model = new Model();
+        listOfInputs = new ArrayList<>();
+
+    }
+
+    public void goToBackwardsActivity(){
+
+        Intent intent = new Intent(this, Backwards.class);
+
+        intent.putExtra("modelObject", model);
+
+        startActivityForResult(intent, 666);
+
     }
 
     public void sendMessage(View view) {
-
-        Intent intent = new Intent(this, Backwards.class);
 
         EditText inputText = findViewById(R.id.inputText);
 
@@ -35,19 +46,16 @@ public class Main extends AppCompatActivity {
 
         String reversedTextInput = model.reverseString(textInput);
 
-        model.setData(textInput);
-
-        model.setReversedData(reversedTextInput);
-
         listOfInputs.add(textInput);
 
+        model.setData(textInput);
+        model.setReversedData(reversedTextInput);
         model.setDataList(listOfInputs);
 
         inputText.setText("");
 
-        intent.putExtra("modelObject", model);
 
-        startActivityForResult(intent, 666);
+        goToBackwardsActivity();
 
     }
 

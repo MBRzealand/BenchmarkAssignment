@@ -13,24 +13,24 @@ public class Backwards extends AppCompatActivity {
 
     Model model;
 
+    TextView originalTextView;
+    TextView reversedTextView;
+    TextView listTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_secondary);
+        setContentView(R.layout.activity_backwards);
 
         model = (Model) getIntent().getSerializableExtra("modelObject");
 
-        TextView outputView1 = findViewById(R.id.outputView1);
+        originalTextView = findViewById(R.id.originalOutput);
+        reversedTextView = findViewById(R.id.reversedOutput);
+        listTextView = findViewById(R.id.listOutput);
 
-        TextView outputView2 = findViewById(R.id.outputView2);
-
-        TextView outputView3 = findViewById(R.id.outputView3);
-
-        outputView1.setText(model.getData());
-
-        outputView2.setText(model.getReversedData());
-
-        outputView3.setText(model.getDataList().toString());
+        originalTextView.setText(model.getData());
+        reversedTextView.setText(model.getReversedData());
+        listTextView.setText(model.getDataList().toString());
 
     }
 
