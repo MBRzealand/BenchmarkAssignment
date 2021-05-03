@@ -5,12 +5,55 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.SecondaryAndroidView">
+        tools:context=".view.Backwards">
 
     <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/outputView"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/outputView1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintTop_toBottomOf="@+id/originalLabel"
+            android:layout_marginTop="24dp"/>
+    <TextView
+            android:text="Original Message:"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/originalLabel"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp" android:layout_marginTop="32dp" android:textStyle="bold"/>
+    <TextView
+            android:text="Reversed Message:"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/reversedLabel"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outputView1" android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp" android:layout_marginTop="24dp" android:textStyle="bold"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/outputView2"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reversedLabel" android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp" android:layout_marginTop="24dp"/>
+    <TextView
+            android:text="List of Messages:"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/listOfMessagesLabel"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outputView2" android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp" android:layout_marginTop="24dp" android:textStyle="bold"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/outputView3"
+            app:layout_constraintTop_toBottomOf="@+id/listOfMessagesLabel" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+    <Button
+            android:text="Return"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/button2"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="24dp" android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="32dp"
+            android:onClick="returnToMain"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
