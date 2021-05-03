@@ -58,11 +58,7 @@ public class Main extends AppCompatActivity {
             case 666:
                 if (resultCode == Activity.RESULT_OK) {
 
-                    Model returnmodel = (Model) data.getSerializableExtra("modelObject");
-
-                    model.setDataList(returnmodel.getDataList());
-
-                    model = returnmodel;
+                    model = (Model) data.getSerializableExtra("returnedModelObject");
 
                 }
                 break;

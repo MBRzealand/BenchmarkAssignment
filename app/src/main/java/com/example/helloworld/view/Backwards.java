@@ -16,10 +16,9 @@ public class Backwards extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_secondary);
 
         model = (Model) getIntent().getSerializableExtra("modelObject");
-
-        setContentView(R.layout.activity_secondary);
 
         TextView outputView1 = findViewById(R.id.outputView1);
 
@@ -39,7 +38,7 @@ public class Backwards extends AppCompatActivity {
 
         Intent intent = new Intent(this, Main.class);
 
-        intent.putExtra("modelObject", model);
+        intent.putExtra("returnedModelObject", model);
 
         setResult(Activity.RESULT_OK,intent);
 
