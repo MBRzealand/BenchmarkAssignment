@@ -16,6 +16,7 @@ public class Backwards extends AppCompatActivity {
     TextView originalTextView;
     TextView reversedTextView;
     TextView listTextView;
+    TextView reversedListTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +28,12 @@ public class Backwards extends AppCompatActivity {
         originalTextView = findViewById(R.id.originalOutput);
         reversedTextView = findViewById(R.id.reversedOutput);
         listTextView = findViewById(R.id.listOutput);
+        reversedListTextView = findViewById(R.id.reversedListOutput);
 
         originalTextView.setText(model.getData());
         reversedTextView.setText(model.getReversedData());
         listTextView.setText(model.getDataList().toString());
+        reversedListTextView.setText(model.getReversedDataList().toString());
 
     }
 

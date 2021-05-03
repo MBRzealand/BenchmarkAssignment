@@ -9,7 +9,9 @@ public class Model implements Serializable {
 
     private String reversedData;
 
-    private ArrayList<String> dataList = new ArrayList<>();
+    private ArrayList<String> dataList;
+
+    private ArrayList<String> reversedDataList;
 
 
     public String getData() {
@@ -36,6 +38,15 @@ public class Model implements Serializable {
 
     public void setDataList(ArrayList<String> dataList) {
         this.dataList = dataList;
+    }
+
+
+    public ArrayList<String> getReversedDataList() {
+        return reversedDataList;
+    }
+
+    public void setReversedDataList(ArrayList<String> reversedDataList) {
+        this.reversedDataList = reversedDataList;
     }
 
 

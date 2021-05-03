@@ -17,6 +17,9 @@ public class Main extends AppCompatActivity {
 
     Model model;
     ArrayList<String> listOfInputs;
+    ArrayList<String> listOfReversedInputs;
+
+    EditText inputText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,9 @@ public class Main extends AppCompatActivity {
 
         model = new Model();
         listOfInputs = new ArrayList<>();
+        listOfReversedInputs = new ArrayList<>();
+
+        inputText = findViewById(R.id.inputText);
 
     }
 
@@ -40,17 +46,16 @@ public class Main extends AppCompatActivity {
 
     public void sendMessage(View view) {
 
-        EditText inputText = findViewById(R.id.inputText);
-
         String textInput = inputText.getText().toString();
-
         String reversedTextInput = model.reverseString(textInput);
 
         listOfInputs.add(textInput);
+        listOfReversedInputs.add(reversedTextInput);
 
         model.setData(textInput);
-        model.setReversedData(reversedTextInput);
         model.setDataList(listOfInputs);
+        model.setReversedData(reversedTextInput);
+        model.setReversedDataList(listOfReversedInputs);
 
         inputText.setText("");
 
